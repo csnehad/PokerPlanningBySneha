@@ -1,0 +1,203 @@
+2022-01-31 17:48:50,673 INFO  [restartedMain] PokerApplication: Starting PokerApplication using Java 17.0.1 on lin33004946 with PID 22084 (C:\Users\snehadc\git\pokersessionplanning\PokerRestApi\target\classes started by snehadc in C:\Users\snehadc\git\pokersessionplanning\PokerRestApi)
+2022-01-31 17:48:50,676 INFO  [restartedMain] PokerApplication: No active profile set, falling back to default profiles: default
+2022-01-31 17:48:50,732 INFO  [restartedMain] DevToolsPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-31 17:48:50,740 INFO  [restartedMain] DevToolsPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-31 17:48:51,364 INFO  [restartedMain] RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-31 17:48:51,430 INFO  [restartedMain] RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 56 ms. Found 4 JPA repository interfaces.
+2022-01-31 17:48:52,188 INFO  [restartedMain] TomcatWebServer: Tomcat initialized with port(s): 8081 (http)
+2022-01-31 17:48:52,201 INFO  [restartedMain] Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8081"]
+2022-01-31 17:48:52,202 INFO  [restartedMain] StandardService: Starting service [Tomcat]
+2022-01-31 17:48:52,202 INFO  [restartedMain] StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-01-31 17:48:52,299 INFO  [restartedMain] [/]: Initializing Spring embedded WebApplicationContext
+2022-01-31 17:48:52,299 INFO  [restartedMain] ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 1559 ms
+2022-01-31 17:48:52,335 INFO  [restartedMain] HikariDataSource: HikariPool-1 - Starting...
+2022-01-31 17:48:52,481 INFO  [restartedMain] HikariDataSource: HikariPool-1 - Start completed.
+2022-01-31 17:48:52,498 INFO  [restartedMain] H2ConsoleAutoConfiguration: H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-01-31 17:48:52,676 INFO  [restartedMain] LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-31 17:48:52,727 INFO  [restartedMain] Version: HHH000412: Hibernate ORM core version 5.6.1.Final
+2022-01-31 17:48:52,870 INFO  [restartedMain] Version: HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-31 17:48:52,980 INFO  [restartedMain] Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-31 17:48:53,598 INFO  [restartedMain] JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-31 17:48:53,608 INFO  [restartedMain] LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-31 17:48:54,162 WARN  [restartedMain] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-31 17:48:54,530 INFO  [restartedMain] OptionalLiveReloadServer: LiveReload server is running on port 35729
+2022-01-31 17:48:54,546 INFO  [restartedMain] Http11NioProtocol: Starting ProtocolHandler ["http-nio-8081"]
+2022-01-31 17:48:54,593 INFO  [restartedMain] TomcatWebServer: Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-31 17:48:54,606 INFO  [restartedMain] PokerApplication: Started PokerApplication in 4.244 seconds (JVM running for 4.818)
+2022-01-31 17:49:01,038 INFO  [http-nio-8081-exec-2] [/]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-31 17:49:01,039 INFO  [http-nio-8081-exec-2] DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2022-01-31 17:49:01,040 INFO  [http-nio-8081-exec-2] DispatcherServlet: Completed initialization in 1 ms
+2022-01-31 17:52:24,376 WARN  [http-nio-8081-exec-10] ResponseStatusExceptionResolver: Resolved [com.pokerrestapi.exception.UserStoryDeletionNotPermitted]
+2022-01-31 17:52:45,151 ERROR [http-nio-8081-exec-1] [dispatcherServlet]: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is javax.persistence.EntityNotFoundException: Unable to find com.pokerrestapi.entity.Session with id 7852] with root cause
+javax.persistence.EntityNotFoundException: Unable to find com.pokerrestapi.entity.Session with id 7852
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$JpaEntityNotFoundDelegate.handleEntityNotFound(EntityManagerFactoryBuilderImpl.java:177)
+	at org.hibernate.proxy.AbstractLazyInitializer.checkTargetState(AbstractLazyInitializer.java:298)
+	at org.hibernate.proxy.AbstractLazyInitializer.initialize(AbstractLazyInitializer.java:187)
+	at org.hibernate.proxy.AbstractLazyInitializer.getImplementation(AbstractLazyInitializer.java:322)
+	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor.intercept(ByteBuddyInterceptor.java:45)
+	at org.hibernate.proxy.ProxyConfiguration$InterceptorDispatcher.intercept(ProxyConfiguration.java:95)
+	at com.pokerrestapi.entity.Session$HibernateProxy$UQ3OplrF.isActive(Unknown Source)
+	at com.pokerrestapi.serviceimpl.VoteServiceImpl.submitUserStoryVote(VoteServiceImpl.java:50)
+	at com.pokerrestapi.controller.VoteController.submitUserStoryVote(VoteController.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1722)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2022-01-31 17:54:59,354 INFO  [Thread-6] LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-31 17:54:59,355 INFO  [Thread-6] SchemaDropperImpl$DelayedDropActionImpl: HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-01-31 17:54:59,573 WARN  [Thread-6] DisposableBeanAdapter: Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-01-31 17:54:59,575 INFO  [Thread-6] HikariDataSource: HikariPool-1 - Shutdown initiated...
+2022-01-31 17:54:59,578 INFO  [Thread-6] HikariDataSource: HikariPool-1 - Shutdown completed.
+2022-01-31 17:54:59,660 INFO  [restartedMain] PokerApplication: Starting PokerApplication using Java 17.0.1 on lin33004946 with PID 22084 (C:\Users\snehadc\git\pokersessionplanning\PokerRestApi\target\classes started by snehadc in C:\Users\snehadc\git\pokersessionplanning\PokerRestApi)
+2022-01-31 17:54:59,661 INFO  [restartedMain] PokerApplication: No active profile set, falling back to default profiles: default
+2022-01-31 17:54:59,847 INFO  [restartedMain] RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-31 17:54:59,868 INFO  [restartedMain] RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
+2022-01-31 17:54:59,963 INFO  [restartedMain] TomcatWebServer: Tomcat initialized with port(s): 8081 (http)
+2022-01-31 17:54:59,965 INFO  [restartedMain] Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8081"]
+2022-01-31 17:54:59,965 INFO  [restartedMain] StandardService: Starting service [Tomcat]
+2022-01-31 17:54:59,965 INFO  [restartedMain] StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-01-31 17:54:59,983 INFO  [restartedMain] [/]: Initializing Spring embedded WebApplicationContext
+2022-01-31 17:54:59,984 INFO  [restartedMain] ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 321 ms
+2022-01-31 17:54:59,995 INFO  [restartedMain] HikariDataSource: HikariPool-2 - Starting...
+2022-01-31 17:55:00,122 INFO  [restartedMain] HikariDataSource: HikariPool-2 - Start completed.
+2022-01-31 17:55:00,123 INFO  [restartedMain] H2ConsoleAutoConfiguration: H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-01-31 17:55:00,154 INFO  [restartedMain] LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-31 17:55:00,160 INFO  [restartedMain] Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-31 17:55:00,231 INFO  [restartedMain] JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-31 17:55:00,232 INFO  [restartedMain] LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-31 17:55:00,376 WARN  [restartedMain] JpaBaseConfiguration$JpaWebConfiguration: spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-31 17:55:00,465 INFO  [restartedMain] OptionalLiveReloadServer: LiveReload server is running on port 35729
+2022-01-31 17:55:00,470 INFO  [restartedMain] Http11NioProtocol: Starting ProtocolHandler ["http-nio-8081"]
+2022-01-31 17:55:00,475 INFO  [restartedMain] TomcatWebServer: Tomcat started on port(s): 8081 (http) with context path ''
+2022-01-31 17:55:00,478 INFO  [restartedMain] PokerApplication: Started PokerApplication in 0.855 seconds (JVM running for 370.689)
+2022-01-31 17:55:00,480 INFO  [restartedMain] ConditionEvaluationDeltaLoggingListener: Condition evaluation unchanged
+2022-01-31 17:55:40,023 INFO  [http-nio-8081-exec-2] [/]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-31 17:55:40,024 INFO  [http-nio-8081-exec-2] DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2022-01-31 17:55:40,025 INFO  [http-nio-8081-exec-2] DispatcherServlet: Completed initialization in 1 ms
+2022-01-31 18:01:04,583 WARN  [http-nio-8081-exec-9] ResponseStatusExceptionResolver: Resolved [com.pokerrestapi.exception.UserStoryDeletionNotPermitted]
+2022-01-31 18:01:09,179 WARN  [http-nio-8081-exec-4] ResponseStatusExceptionResolver: Resolved [com.pokerrestapi.exception.UserStoryDeletionNotPermitted]
+2022-01-31 18:46:54,504 WARN  [http-nio-8081-exec-1] ResponseStatusExceptionResolver: Resolved [com.pokerrestapi.exception.UserStoryDeletionNotPermitted]
+2022-01-31 18:55:46,716 INFO  [Thread-8] LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-31 18:55:46,718 INFO  [Thread-8] SchemaDropperImpl$DelayedDropActionImpl: HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-01-31 18:55:46,992 WARN  [Thread-8] DisposableBeanAdapter: Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-01-31 18:55:46,994 INFO  [Thread-8] HikariDataSource: HikariPool-2 - Shutdown initiated...
+2022-01-31 18:55:46,997 INFO  [Thread-8] HikariDataSource: HikariPool-2 - Shutdown completed.
+2022-01-31 18:55:47,663 INFO  [restartedMain] PokerApplication: Starting PokerApplication using Java 17.0.1 on lin33004946 with PID 22084 (C:\Users\snehadc\git\pokersessionplanning\PokerRestApi\target\classes started by snehadc in C:\Users\snehadc\git\pokersessionplanning\PokerRestApi)
+2022-01-31 18:55:47,666 INFO  [restartedMain] PokerApplication: No active profile set, falling back to default profiles: default
+2022-01-31 18:55:48,900 INFO  [restartedMain] RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-31 18:55:48,913 INFO  [restartedMain] RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2022-01-31 18:55:49,707 INFO  [restartedMain] TomcatWebServer: Tomcat initialized with port(s): 8081 (http)
+2022-01-31 18:55:49,711 INFO  [restartedMain] Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8081"]
+2022-01-31 18:55:49,713 INFO  [restartedMain] StandardService: Starting service [Tomcat]
+2022-01-31 18:55:49,714 INFO  [restartedMain] StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.55]
+2022-01-31 18:55:49,866 INFO  [restartedMain] [/]: Initializing Spring embedded WebApplicationContext
+2022-01-31 18:55:49,867 INFO  [restartedMain] ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2186 ms
+2022-01-31 18:55:49,943 INFO  [restartedMain] HikariDataSource: HikariPool-3 - Starting...
+2022-01-31 18:55:49,950 INFO  [restartedMain] HikariDataSource: HikariPool-3 - Start completed.
+2022-01-31 18:55:49,952 INFO  [restartedMain] H2ConsoleAutoConfiguration: H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2022-01-31 18:55:50,702 INFO  [restartedMain] LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-31 18:55:50,730 INFO  [restartedMain] Dialect: HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-31 18:55:51,046 INFO  [restartedMain] JtaPlatformInitiator: HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-31 18:55:51,103 INFO  [restartedMain] LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-31 18:55:51,479 WARN  [restartedMain] AnnotationConfigServletWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.pokerrestapi.controller.SessionController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@727bb448]
+2022-01-31 18:55:51,481 INFO  [restartedMain] LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-31 18:55:51,481 INFO  [restartedMain] SchemaDropperImpl$DelayedDropActionImpl: HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-01-31 18:55:51,722 WARN  [restartedMain] DisposableBeanAdapter: Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-01-31 18:55:51,724 INFO  [restartedMain] HikariDataSource: HikariPool-3 - Shutdown initiated...
+2022-01-31 18:55:51,782 INFO  [restartedMain] HikariDataSource: HikariPool-3 - Shutdown completed.
+2022-01-31 18:55:51,784 INFO  [restartedMain] StandardService: Stopping service [Tomcat]
+2022-01-31 18:55:51,824 INFO  [restartedMain] ConditionEvaluationReportLoggingListener: 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-31 18:55:51,939 ERROR [restartedMain] SpringApplication: Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionController': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.pokerrestapi.controller.SessionController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@727bb448]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1302)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:412)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
+	at com.pokerrestapi.PokerApplication.main(PokerApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.pokerrestapi.controller.SessionController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@727bb448]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)
+	... 23 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Session
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3402)
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2504)
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:463)
+	... 25 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Session
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:145)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	... 29 common frames omitted
